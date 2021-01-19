@@ -9,6 +9,11 @@ console.log(newNumber)
 const person = {
   name: 'James',
 }
-const secondPerson = person
+
+const secondPerson = {
+  ...person, // Makes a copy of person object. The below reassignment won't affect
+}
+
+person.name = 'Millie'
 
 console.log(secondPerson)
