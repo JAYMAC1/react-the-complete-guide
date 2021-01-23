@@ -2,9 +2,18 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import UserInput from './UserInput/UserInput'
-import userinput from './UserInput/UserInput'
+import UserOutput from './UserOutput/UserOutput'
 
 class App extends Component {
+  state = {
+    name: undefined,
+  }
+  onNameChangeHandler = (e) => {
+    this.setState({
+      name: e.target.value,
+    })
+    console.log(e.target.value)
+  }
   render() {
     return (
       <div className='App'>
@@ -15,7 +24,9 @@ class App extends Component {
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <UserInput />
+        <UserInput changed={this.onNameChangeHandler} />
+        <UserOutput name={this.state.name} />
+        <UserOutput />
       </div>
     )
   }
