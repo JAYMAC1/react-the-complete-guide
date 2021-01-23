@@ -1,9 +1,9 @@
 import React from 'react'
 
 const useroutput = (props) => {
-  retrurn(
+  return (
     <div className='useroutput'>
-      <p>Welcome NameHere</p>
+      <p>Welcome {!props.name ? 'Mr(s) nobody' : props.name},</p>
       <p>This is my attempt at the React Challeneg one</p>
     </div>
   )
