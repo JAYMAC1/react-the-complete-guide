@@ -22,7 +22,18 @@
   font-size: large;
 }
 
+.char-card {
+  display: inline;
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+  border: 1px solid #111;
+}
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
